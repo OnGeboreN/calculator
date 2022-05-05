@@ -29,9 +29,9 @@ class Calculator
      *
      * @throws \LogicException when operation doesn't exist
      *
-     * @return float
+     * @return float|string
      */
-    public function evaluate(string $operation, float $first, float $second): float
+    public function evaluate(string $operation, float $first, float $second): float|string
     {
         $operation = mb_strtolower($operation);
         if (!isset($this->operations[$operation])) {
@@ -56,6 +56,7 @@ class Calculator
     public function setPrecision(int $precision): Calculator
     {
         $this->precision = $precision;
+
         return $this;
     }
 

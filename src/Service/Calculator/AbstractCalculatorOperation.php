@@ -7,7 +7,8 @@ abstract class AbstractCalculatorOperation implements CalculatorOperation
     /**
      * @param float $first
      * @param float $second
-     * @return float
+     *
+     * @return float|string
      */
-    public abstract function evaluate(float $first, float $second): float;
+    public abstract function evaluate(float $first, float $second): float|string;
 }

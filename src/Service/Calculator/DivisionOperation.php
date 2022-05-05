@@ -7,7 +7,7 @@ class DivisionOperation extends AbstractCalculatorOperation
     /**
      * @inheritDoc
      */
-    public function evaluate(float $first, float $second): float
+    public function evaluate(float $first, float $second): float|string
     {
         if ($second == 0) {
             throw new \LogicException('Divide by zero not possible');

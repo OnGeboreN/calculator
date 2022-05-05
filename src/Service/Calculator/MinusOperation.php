@@ -7,7 +7,7 @@ class MinusOperation extends AbstractCalculatorOperation
     /**
      * @inheritDoc
      */
-    public function evaluate(float $first, float $second): float
+    public function evaluate(float $first, float $second): float|string
     {
         return $first - $second;
     }
